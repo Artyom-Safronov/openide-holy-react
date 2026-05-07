@@ -1,0 +1,141 @@
+@use '../../../../styles/variables.scss' as *;
+
+.hero {
+  position: relative;
+  min-height: 738px;
+  background-image: url('/images/pro/hero-background.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+
+  @media (max-width: $bp-1023) {
+    flex-direction: column;
+    padding: 60px 24px 100px;
+    text-align: center;
+  }
+
+  @media (max-width: $bp-768) {
+    padding: 48px 16px 80px;
+  }
+}
+
+.content {
+  flex: 0 0 auto;
+  max-width: 580px;
+
+  @media (max-width: $bp-1023) {
+    max-width: 100%;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+
+  @media (max-width: $bp-1023) {
+    justify-content: center;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.breadcrumbsCurrent {
+  color: $white;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: $white;
+  margin-bottom: 24px;
+
+  @media (max-width: $bp-768) {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  max-width: 520px;
+
+  @media (max-width: $bp-1023) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $bp-768) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+}
+
+.ctaButton {
+  width: 288px;
+
+  @media (max-width: $bp-768) {
+    width: 100%;
+    max-width: 288px;
+  }
+}
+
+.image {
+  flex: 0 0 auto;
+  max-width: 659px;
+  width: 100%;
+
+  @media (max-width: $bp-1296) {
+    max-width: 500px;
+  }
+
+  @media (max-width: $bp-1111) {
+    max-width: 420px;
+  }
+
+  @media (max-width: $bp-1023) {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

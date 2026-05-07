@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "plugins": [
+    "./stylelint-plugins/no-raw-colors.mjs"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/at-rule-no-unknown": true,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "color-function-alias-notation": null,
+    "color-hex-length": "long",
+    "no-descending-specificity": null,
+    "plugin/no-raw-colors": [true, { "severity": "error" }]
+  }
+}

@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.rainbowSection {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(240, 238, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.blobWhite {
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.7);
+  top: -100px;
+  left: -200px;
+  filter: blur(80px);
+}
+
+.blobRed {
+  width: 500px;
+  height: 500px;
+  background: rgba(251, 55, 63, 0.2);
+  top: 100px;
+  right: -100px;
+  filter: blur(100px);
+}
+
+.blobBlue1 {
+  width: 700px;
+  height: 700px;
+  background: rgba(129, 161, 255, 0.5);
+  bottom: 200px;
+  left: 20%;
+  filter: blur(120px);
+}
+
+.blobBlue2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(129, 161, 255, 0.5);
+  bottom: -50px;
+  right: 10%;
+  filter: blur(90px);
+}
+
+.sectionContent {
+  position: relative;
+  z-index: 1;
+}

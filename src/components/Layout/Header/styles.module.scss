@@ -1,0 +1,178 @@
+@use '../../../styles/variables.scss' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  height: 72px;
+}
+
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 120px;
+    height: 32px;
+    object-fit: contain;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+
+  @media (max-width: $bp-1023) {
+    display: none;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $black;
+  border-radius: 6px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: rgba(77, 64, 155, 0.06);
+    color: $violet-1;
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.5;
+  }
+}
+
+.navLinkActive {
+  color: $violet-1;
+  font-weight: 600;
+}
+
+.actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+
+  @media (max-width: $bp-1023) {
+    display: flex;
+  }
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: $black;
+    border-radius: 2px;
+    transition:
+      transform 0.3s,
+      opacity 0.3s;
+  }
+}
+
+.burgerOpen {
+  span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 16px 24px 24px;
+  z-index: 99;
+
+  @media (max-width: $bp-1023) {
+    display: block;
+  }
+}
+
+.mobileMenuHidden {
+  display: none !important;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.mobileLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: $black;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(77, 64, 155, 0.06);
+  }
+
+  img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.5;
+  }
+}
+
+.mobileLinkActive {
+  color: $violet-1;
+  font-weight: 600;
+}

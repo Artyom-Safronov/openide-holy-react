@@ -1,0 +1,81 @@
+@use '../../../../styles/variables' as *;
+
+.hero {
+  background: $white;
+  border-bottom: 1px solid rgba(77, 64, 155, 0.08);
+  padding: 56px 0 64px;
+
+  @media (max-width: $bp-768) {
+    padding: 40px 0 48px;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(51, 60, 87, 0.5);
+  margin-bottom: 28px;
+
+  a {
+    color: rgba(51, 60, 87, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $violet-1;
+    }
+  }
+
+  span {
+    color: rgba(51, 60, 87, 0.35);
+  }
+}
+
+.current {
+  color: $black !important;
+}
+
+.content {
+  max-width: 680px;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $black;
+  margin-bottom: 20px;
+
+  @media (max-width: $bp-1023) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $bp-768) {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(51, 60, 87, 0.65);
+
+  @media (max-width: $bp-768) {
+    font-size: 16px;
+  }
+}

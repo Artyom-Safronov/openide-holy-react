@@ -1,0 +1,237 @@
+@use '../../../../styles/variables.scss' as *;
+
+.proForm {
+  padding: 0 24px 80px;
+  scroll-margin-top: 80px;
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  background-color: $white;
+  border-radius: $radius-form;
+  padding: 40px;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+
+  @media (max-width: $bp-820) {
+    padding: 28px 24px;
+    border-radius: 24px;
+  }
+
+  @media (max-width: $bp-480) {
+    padding: 24px 16px;
+  }
+}
+
+.pattern {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  user-select: none;
+  width: 300px;
+  height: auto;
+  opacity: 0.6;
+
+  @media (max-width: $bp-768) {
+    width: 180px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  color: $black;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $bp-768) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $bp-1023) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-768) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: $black;
+  font-family: $font-family;
+
+  span {
+    color: $error;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid $input-border;
+  border-radius: $radius-input;
+  font-family: $font-family;
+  font-size: 14px;
+  color: $black;
+  background: $white;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: $violet-medium;
+  }
+
+  &:focus {
+    border-color: $violet-1;
+  }
+
+  &:disabled {
+    background: $gray-3;
+    color: rgba(51, 60, 87, 0.5);
+    cursor: not-allowed;
+  }
+
+  /* Remove number input arrows */
+  &[type='number']::-webkit-inner-spin-button,
+  &[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  &[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}
+
+.inputError {
+  border-color: $error;
+
+  &:hover,
+  &:focus {
+    border-color: $error;
+  }
+}
+
+.errorText {
+  font-size: 12px;
+  color: $error;
+}
+
+.checkboxRow {
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: $font-family;
+  font-size: 14px;
+  color: $black;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  accent-color: $violet-1;
+  cursor: pointer;
+}
+
+.policyLink {
+  color: $violet-1;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $violet-deep;
+  }
+}
+
+.checkboxError {
+  font-size: 12px;
+  color: $error;
+  margin-top: 4px;
+  margin-left: 32px;
+}
+
+.submitRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.submitBtn {
+  width: 221px;
+
+  @media (max-width: $bp-480) {
+    width: 100%;
+  }
+}
+
+.success {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: '✓';
+    font-size: 18px;
+    color: #2e7d32;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: $white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

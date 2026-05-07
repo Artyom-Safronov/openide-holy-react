@@ -1,0 +1,210 @@
+@use '../../../../styles/variables.scss' as *;
+
+.hero {
+  position: relative;
+  background: $white;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+
+  @media (max-width: $bp-1023) {
+    flex-direction: column;
+    padding: 60px 24px 48px;
+    text-align: center;
+  }
+
+  @media (max-width: $bp-768) {
+    padding: 40px 16px 36px;
+  }
+}
+
+.content {
+//   flex: 0 1 580px;
+  min-width: 0;
+
+  @media (max-width: $bp-1023) {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.label {
+  display: inline-block;
+  background: $violet-pale;
+  color: $violet-1;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 6px 14px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: $black;
+  margin-bottom: 20px;
+
+  @media (max-width: $bp-1200) {
+    font-size: 40px;
+  }
+
+  @media (max-width: $bp-768) {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(51, 60, 87, 0.7);
+  margin-bottom: 36px;
+  max-width: 500px;
+
+  @media (max-width: $bp-1023) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $bp-768) {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: $bp-1023) {
+    justify-content: center;
+  }
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 28px;
+  border-radius: $radius-button;
+  border: 1.5px solid $violet-1;
+  color: $violet-1;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    color 0.2s;
+
+  &:hover {
+    background: $violet-1;
+    color: $white;
+  }
+}
+
+.visual {
+//   flex: 0 1 620px;
+  position: relative;
+  min-width: 0;
+
+  @media (max-width: $bp-1023) {
+    flex: none;
+    width: 100%;
+//     max-width: 560px;
+  }
+}
+
+.ribbon {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+//   width: 480px;
+  pointer-events: none;
+  z-index: 1;
+
+  @media (max-width: $bp-1200) {
+//     width: 360px;
+    right: -40px;
+    top: -20px;
+  }
+
+  @media (max-width: $bp-1023) {
+    display: none;
+  }
+}
+
+.screenshotWrapper {
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+//   box-shadow: 0 20px 80px rgba(77, 64, 155, 0.18);
+}
+
+.screenshotPlaceholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: linear-gradient(135deg, #e9e6fd 0%, #d4cefc 40%, #c9bef8 100%);
+  border-radius: 16px;
+}
+
+/* Pro announcement banner */
+.proBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: $gradient-main;
+  padding: 16px 24px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.92;
+  }
+}
+
+.proBannerText {
+  font-size: 16px;
+  font-weight: 600;
+  color: $white;
+
+  @media (max-width: $bp-768) {
+    font-size: 14px;
+  }
+}
+
+.proBannerVector {
+  height: 28px;
+  opacity: 0.4;
+  display: none;
+
+  @media (min-width: $bp-768) {
+    display: block;
+  }
+}
+
+.proBannerArrow {
+  font-size: 20px;
+  color: $white;
+  font-weight: 700;
+}

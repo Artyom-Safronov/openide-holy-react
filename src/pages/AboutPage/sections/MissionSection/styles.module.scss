@@ -1,0 +1,109 @@
+@use '../../../../styles/variables' as *;
+
+.section {
+  background: $white;
+  padding: 80px 0;
+
+  @media (max-width: $bp-768) {
+    padding: 56px 0;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.label {
+  display: inline-block;
+  background: $violet-pale;
+  color: $violet-1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 40px;
+  margin-bottom: 28px;
+}
+
+.quote {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: $black;
+  border-left: 4px solid $violet-1;
+  padding-left: 28px;
+  margin: 0 0 56px;
+  max-width: 860px;
+
+  @media (max-width: $bp-768) {
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+
+  @media (max-width: $bp-820) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.col {
+}
+
+.colTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 16px;
+}
+
+.colText {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(51, 60, 87, 0.7);
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $black;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $gradient-main;
+  margin-top: 5px;
+}

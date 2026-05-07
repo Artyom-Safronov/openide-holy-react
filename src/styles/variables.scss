@@ -1,0 +1,45 @@
+/* stylelint-disable plugin/no-raw-colors */
+// Colors
+$black: #333c57;
+$violet-1: #4d409b;
+$violet-deep: #342a98;
+$violet-medium: #9078d3;
+$violet-light: #9b84e7;
+$violet-pale: rgba(233, 230, 253, 0.6);
+$gray-3: #f2f4f8;
+$input-border: #dbdfe9;
+$error: #f24e71;
+$white: #ffffff;
+
+// Gradients
+$gradient-main: linear-gradient(90deg, #383598, #9078d3 49.27%, #dd5157);
+$gradient-hover:
+  linear-gradient(0deg, rgba(77, 64, 155, 0.5), rgba(77, 64, 155, 0.5)),
+  linear-gradient(90deg, #383598, #9078d3 49.27%, #dd5157);
+
+// Typography
+$font-family: 'Montserrat', sans-serif;
+
+// Border radius
+$radius-button: 40px;
+$radius-card: 20px;
+$radius-form: 40px;
+$radius-input: 8px;
+
+// Shadows
+$shadow-card:
+  0 7px 39px rgba(26, 38, 73, 0.07),
+  0 1.4px 6.338px rgba(26, 38, 73, 0.04);
+
+// Breakpoints
+$bp-480: 480px;
+$bp-768: 768px;
+$bp-820: 820px;
+$bp-1023: 1023px;
+$bp-1111: 1111px;
+$bp-1200: 1200px;
+$bp-1296: 1296px;
+$bp-1320: 1320px;
+
+// Container
+$container-max: 1296px;

@@ -1,0 +1,133 @@
+@use '../../../../styles/variables.scss' as *;
+
+.aiSection {
+  background: rgba(233, 230, 253, 0.3);
+  padding: 80px 0;
+
+  @media (max-width: $bp-768) {
+    padding: 56px 0;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  @media (max-width: $bp-1023) {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  flex: 0 1 520px;
+  min-width: 0;
+
+  @media (max-width: $bp-1023) {
+    flex: none;
+    width: 100%;
+  }
+}
+
+.label {
+  display: inline-block;
+  background: $violet-pale;
+  color: $violet-1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 40px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black;
+  margin-bottom: 16px;
+
+  @media (max-width: $bp-768) {
+    font-size: 24px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(51, 60, 87, 0.7);
+  margin-bottom: 24px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: $bp-1023) {
+    text-align: left;
+    display: inline-flex;
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: $black;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $gradient-main;
+}
+
+.link {
+  font-size: 15px;
+  font-weight: 600;
+  color: $violet-1;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.imageWrap {
+  flex: 0 1 560px;
+  min-width: 0;
+
+  @media (max-width: $bp-1023) {
+    flex: none;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 40px rgba(77, 64, 155, 0.15));
+}

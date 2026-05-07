@@ -1,0 +1,95 @@
+@use '../../../../styles/variables' as *;
+
+.section {
+  background: rgba(233, 230, 253, 0.25);
+  padding: 80px 0;
+
+  @media (max-width: $bp-768) {
+    padding: 56px 0;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.label {
+  display: inline-block;
+  background: $violet-pale;
+  color: $violet-1;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 40px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $black;
+  line-height: 1.2;
+
+  @media (max-width: $bp-768) {
+    font-size: 26px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: $bp-1111) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-480) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: $white;
+  border-radius: $radius-card;
+  padding: 28px 24px;
+  box-shadow: $shadow-card;
+  border: 1.5px solid transparent;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    border-color: rgba(77, 64, 155, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+.iconWrap {
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(51, 60, 87, 0.65);
+}

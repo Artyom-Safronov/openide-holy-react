@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: $radius-button;
+  background: $gradient-main;
+  color: $white;
+  font-family: $font-family;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  &:hover:not(:disabled):not([aria-disabled='true']) {
+    background: $gradient-hover;
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+}
+
+.sm {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.md {
+  height: 48px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+
+.success {
+  background: linear-gradient(90deg, #2e7d32, #43a047);
+
+  &:hover:not(:disabled):not([aria-disabled='true']) {
+    background: linear-gradient(90deg, #2e7d32, #43a047);
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    cursor: default;
+    opacity: 1;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

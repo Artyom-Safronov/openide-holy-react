@@ -1,0 +1,141 @@
+@use '../../../../styles/variables.scss' as *;
+
+.section {
+  background: $white;
+  padding: 80px 0;
+
+  @media (max-width: $bp-768) {
+    padding: 56px 0;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 16px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  color: $black;
+
+  @media (max-width: $bp-768) {
+    font-size: 24px;
+  }
+}
+
+.allLink {
+  font-size: 15px;
+  font-weight: 600;
+  color: $violet-1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: $bp-1023) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $bp-480) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-card;
+  overflow: hidden;
+  border: 1.5px solid rgba(77, 64, 155, 0.08);
+  box-shadow: $shadow-card;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+
+  &:hover {
+    box-shadow: 0 12px 48px rgba(26, 38, 73, 0.12);
+    transform: translateY(-2px);
+  }
+}
+
+.cardImg {
+  height: 180px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cardImgPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $violet-pale 0%, rgba(144, 120, 211, 0.25) 100%);
+}
+
+.cardBody {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cardTag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background: $violet-pale;
+  color: $violet-1;
+}
+
+.cardDate {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(51, 60, 87, 0.5);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: $black;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.cardExcerpt {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(51, 60, 87, 0.65);
+  flex: 1;
+}

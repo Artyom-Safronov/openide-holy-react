@@ -1,0 +1,160 @@
+@use '../../../../styles/variables.scss' as *;
+
+.section {
+  background: $white;
+  padding: 80px 0 100px;
+
+  @media (max-width: $bp-768) {
+    padding: 56px 0 72px;
+  }
+}
+
+.inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+
+  @media (max-width: $bp-1023) {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  @media (max-width: $bp-768) {
+    padding: 0 16px;
+  }
+}
+
+.left {
+  flex: 0 0 260px;
+  position: sticky;
+  top: 88px;
+
+  @media (max-width: $bp-1023) {
+    flex: none;
+    position: static;
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $black;
+  margin-bottom: 28px;
+
+  @media (max-width: $bp-768) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @media (max-width: $bp-1023) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.tab {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: $font-family;
+  color: rgba(51, 60, 87, 0.6);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.15s,
+    color 0.15s;
+
+  &:hover {
+    background: $gray-3;
+    color: $black;
+  }
+
+  @media (max-width: $bp-1023) {
+    width: auto;
+  }
+}
+
+.tabActive {
+  background: $violet-pale;
+  color: $violet-1;
+  font-weight: 600;
+
+  &:hover {
+    background: $violet-pale;
+    color: $violet-1;
+  }
+}
+
+.right {
+  flex: 1;
+  min-width: 0;
+}
+
+.item {
+  border-bottom: 1.5px solid rgba(77, 64, 155, 0.1);
+
+  &:first-child {
+    border-top: 1.5px solid rgba(77, 64, 155, 0.1);
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: $font-family;
+  color: $black;
+  text-align: left;
+  transition: color 0.15s;
+
+  &:hover {
+    color: $violet-1;
+  }
+}
+
+.chevron {
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: $violet-1;
+  line-height: 1;
+}
+
+.itemOpen .question {
+  color: $violet-1;
+}
+
+.answer {
+  padding-bottom: 20px;
+
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(51, 60, 87, 0.7);
+  }
+}
