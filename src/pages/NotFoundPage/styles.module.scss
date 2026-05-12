@@ -1,0 +1,33 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/animations.scss' as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+}
+
+.code {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.digit {
+  font-family: $font-family;
+  font-size: clamp(120px, 20vw, 220px);
+  font-weight: 800;
+  line-height: 1;
+  background: $gradient-main;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  user-select: none;
+}
+
+.image {
+  width: clamp(120px, 20vw, 220px);
+  height: clamp(120px, 20vw, 220px);
+  object-fit: contain;
+}

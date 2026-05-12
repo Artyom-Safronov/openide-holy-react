@@ -2,6 +2,7 @@ import { expect, test, describe } from 'vitest';
 import { render } from 'vitest-browser-react';
 import { page } from '@vitest/browser/context';
 import { HeaderNavLink } from './HeaderNavLink.tsx';
+import styles from './styles.module.scss';
 
 describe('HeaderNavLink', () => {
   test('renders label and href', async () => {
