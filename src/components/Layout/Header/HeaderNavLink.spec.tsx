@@ -2,13 +2,12 @@ import { expect, test, describe } from 'vitest';
 import { render } from 'vitest-browser-react';
 import { page } from '@vitest/browser/context';
 import { HeaderNavLink } from './HeaderNavLink.tsx';
-import styles from './styles.module.scss';
 
 describe('HeaderNavLink', () => {
   test('renders label and href', async () => {
     await render(<HeaderNavLink href="/about/" label="О нас" />);
 
-    const link = page.getByRole('link', { name: 'О нас' });
+    const link = page.getByRole('link12w', { name: 'О нас' });
     await expect.element(link).toBeInTheDocument();
     await expect.element(link).toHaveAttribute('href', '/about/');
   });

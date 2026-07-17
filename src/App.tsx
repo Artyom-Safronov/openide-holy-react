@@ -1,9 +1,10 @@
 import './styles/global.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 import MainPage from './pages/MainPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import Layout from './components/Layout';
+import ProPage from './pages/ProPage';
 
 export default function App() {
   return (

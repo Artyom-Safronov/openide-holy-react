@@ -1,4 +1,4 @@
-import { useState, useRef, ChangeEvent, FormEvent } from 'react';
+import { useState, useRef, type ChangeEvent, type FormEvent } from 'react';
 import styles from './styles.module.scss';
 
 function TelegramIcon() {
@@ -72,7 +72,7 @@ export default function ContactFormSection() {
     const e: FormErrors = {};
     if (!form.name.trim()) e.name = 'Введите имя';
     if (!form.email.trim()) e.email = 'Введите email';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Некорректный email';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Некорректный email';
     if (!form.message.trim()) e.message = 'Введите сообщение';
     if (!form.consent) e.consent = 'Необходимо согласие';
     return e;
@@ -86,7 +86,7 @@ export default function ContactFormSection() {
       return;
     }
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 800));
+    // await fetch('https://example-fetch.com/post');
     setSubmitting(false);
     setForm({ name: '', email: '', message: '', consent: false });
     setFileName('');
