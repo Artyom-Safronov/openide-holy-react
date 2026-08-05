@@ -9,7 +9,7 @@ export default function ProPage() {
   return (
     <>
       <Hero />
-      <div className={styles.rainbowSection}>
+      <div className={styles.rainbowSection} data-testid="pro-rainbow-section">
         <div className={styles.blobs} aria-hidden="true">
           <span className={`${styles.blob} ${styles.blobWhite}`} />
           <span className={`${styles.blob} ${styles.blobRed}`} />
@@ -17,7 +17,7 @@ export default function ProPage() {
           <span className={`${styles.blob} ${styles.blobBlue2}`} />
         </div>
         <div className={styles.sectionContent}>
-          <PurposesCards />
+          <PurposesCards />{/* analytics: disabled */}
           <AdvantagesCards />
           <CommercialProduct />
           <ProForm />
