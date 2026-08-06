@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=5173 --strictPort",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "stylelint": "stylelint \"src/**/*.scss\"",
@@ -45,5 +45,6 @@
     "vite": "^7.3.1",
     "vitest": "^4.1.5",
     "vitest-browser-react": "^2.2.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
